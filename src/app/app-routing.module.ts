@@ -3,12 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { ProvinciasArgentinasComponent } from './components/provincias-argentinas/provincias-argentinas.component';
 import { ProvinciaComponent } from './components/provincia/provincia.component';
+import { ProvinciaDetalleComponent } from './components/provincia-detalle/provincia-detalle.component';
 
 
 const routes: Routes = [
   {path:'home',component:HomeComponent},
   {path:'provincias-argentinas',component:ProvinciasArgentinasComponent},
   {path:'provincia/:nombreProvincia',component:ProvinciaComponent},
+  {path:'provincia-detalle/:nombreProvincia',component:ProvinciaDetalleComponent},
   //comodin
   {path:'**',pathMatch:'full',redirectTo:'home'}
 ];

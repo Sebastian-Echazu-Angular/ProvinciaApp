@@ -1,1 +1,16 @@
-<p>provincia-detalle works!</p>
+<hr>
+<div class="row">
+    <div class="col-md-4" style="text-align: center">
+        <img src="{{provincia.bandera}}" class="img-fluid" [alt]="provincia.provincia"> <br><br>
+        <a [routerLink]="['/provincias-argentinas']" class="btn btn-outline-danger btn-block">Regresar</a> </div>
+    <div class="col-md-8">
+        <h3 style="color: crimson">{{provincia.capital}}</h3>
+        <h3 style="color: blue;"> {{provincia.abreviatura | uppercase}}</h3>
+        <hr>
+        <p><b>Fecha de Autonomia:</b>{{provincia.fechaAutonomia}}</p>
+        <p><b>Superficia:</b> {{provincia.superficie}}</p>
+        <p><b>Poblacion:</b> {{provincia.poblacion}}</p>
+        <p><b>Nro de Departamentos:</b> {{provincia.nroDepartamentos}}</p>
+
+    </div>
+</div>

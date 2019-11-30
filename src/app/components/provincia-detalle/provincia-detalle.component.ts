@@ -1,15 +1,26 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ProvinciasService } from 'src/app/service/provincias.service';
+import { Provincia } from 'src/app/interface/provincia';
 
 @Component({
   selector: 'app-provincia-detalle',
   templateUrl: './provincia-detalle.component.html',
   styleUrls: ['./provincia-detalle.component.css']
 })
-export class ProvinciaDetalleComponent implements OnInit {
+export class ProvinciaDetalleComponent {
 
-  constructor() { }
+  nombreProvincia: string;
 
-  ngOnInit() {
+  provincia: Provincia;
+
+  constructor(private activatedRoute: ActivatedRoute, private _provinciaService: ProvinciasService) {
+    this.activatedRoute.params.subscribe(params => {
+      console.log(params.nombreProvincia);
+      console.log(params['ins']);
+      this.provincia = _provinciaService.getProvinciaTarjeta(params['nombreProvincia']);
+    })
+
   }
 
 }
