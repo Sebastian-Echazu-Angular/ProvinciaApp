@@ -1,0 +1,7 @@
+<div class="row card-group">
+    <div class="col-3" *ngFor="let provinciaAux of provincias">
+        <div class="card" style="width: 200px;">
+            <app-provincia [nombreProvincia] = "provinciaAux.provincia"></app-provincia>
+        </div>
+    </div>
+</div>
