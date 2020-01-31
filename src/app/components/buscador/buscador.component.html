@@ -1,0 +1,14 @@
+<h1>Buscando provincias con superficie menor a: {{superficie}} </h1>
+<hr>
+<div class="row" *ngIf="provincias.length == 0">
+    <div class="col-md-12">
+        <div class="alert alert-info" role="alert"> No existen resultados con el superficie: {{superficie}} </div>
+    </div>
+</div>
+<div class="row card-group">
+    <div class="col-3" *ngFor="let provinciaAux of provincias">
+        <div class="card" style="width: 200px;">
+            <app-provincia [nombreProvincia] = "provinciaAux.provincia"></app-provincia>
+        </div>
+    </div>
+</div>

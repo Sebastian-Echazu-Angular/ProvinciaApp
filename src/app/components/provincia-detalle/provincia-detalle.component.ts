@@ -16,8 +16,6 @@ export class ProvinciaDetalleComponent {
 
   constructor(private activatedRoute: ActivatedRoute, private _provinciaService: ProvinciasService) {
     this.activatedRoute.params.subscribe(params => {
-      console.log(params.nombreProvincia);
-      console.log(params['ins']);
       this.provincia = _provinciaService.getProvinciaTarjeta(params['nombreProvincia']);
     })
 

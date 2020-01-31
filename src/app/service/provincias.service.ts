@@ -31,4 +31,19 @@ export class ProvinciasService {
     });
     return this.provincia;
   }
+  
+  public buscarProvincias(superficie: string):Provincia[] {
+    
+    let provinciaArr: Provincia[] = [];
+    let superficieInt = parseInt(superficie);
+    console.log(superficieInt.valueOf());
+    for(let provincia of this.provincias){
+      let ins = parseInt(provincia.superficie);
+      if (superficieInt >= ins) {
+        provinciaArr.push(provincia);
+      }
+    }
+    console.log(provinciaArr);
+   return provinciaArr;
+  }
 }

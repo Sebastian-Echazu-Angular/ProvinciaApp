@@ -10,6 +10,7 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProvinciasService } from './service/provincias.service';
+import { BuscadorComponent } from './components/buscador/buscador.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ProvinciasService } from './service/provincias.service';
     ProvinciasArgentinasComponent,
     ProvinciaDetalleComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    BuscadorComponent
   ],
   imports: [
     BrowserModule,

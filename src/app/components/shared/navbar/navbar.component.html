@@ -7,11 +7,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item" routerLinkActive="active"> <a class="nav-link" [routerLink]="['home']">Home </a> </li>
-            <li class="nav-item" routerLinkActive="active"> <a class="nav-link" [routerLink]="['provincias-argentinas']">Provincias</a> </li>
+            <li class="nav-item" routerLinkActive="active"> <a class="nav-link" [routerLink]="['provincias-argentinas']">Provincias</a> </li>          
+            
         </ul>
+        <a class="nav-link" style="align-content: right;color: white;" > buscar provincias con superficie menor a:  </a>
         <form class="form-inline my-2 my-lg-0"> <input class="form-control mr-sm-2"
-            type="text" placeholder="Buscar" #buscarTexto>
-            <button (click) = "buscarProvincia(buscarTexto.value)" class="btn btn-outline-success my-2 my-sm-0" 
+            type="text" placeholder="Buscar" #buscarTexto>           
+            <button (click) = "buscarSuperficie(buscarTexto.value)" class="btn btn-outline-success my-2 my-sm-0" 
             type="button">Buscar
             </button> 
          </form>
